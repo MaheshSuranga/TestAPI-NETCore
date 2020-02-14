@@ -1,0 +1,30 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Worker] (Table)
+       [dbo].[WorkerStatistic] (Table)
+       Default Constraint: unnamed constraint on [dbo].[WorkerStatistic] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[WorkerStatistic] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[WorkerStatistic] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[WorkerStatistic] (Default Constraint)
+       [dbo].[CheckWorkerCode] (Procedure)
+       [dbo].[DeleteWorker] (Procedure)
+       [dbo].[GetUserIdByToken] (Procedure)
+       [dbo].[GetWorker] (Procedure)
+       [dbo].[GetWorkerStatistic] (Procedure)
+       [dbo].[InsertWorker] (Procedure)
+       [dbo].[InsertWorkerStatistic] (Procedure)
+       [dbo].[UpdateWorker] (Procedure)
+       [dbo].[UpdateWorkerStatistic] (Procedure)
+       [dbo].[VerifyToken] (Procedure)
+
+** Supporting actions

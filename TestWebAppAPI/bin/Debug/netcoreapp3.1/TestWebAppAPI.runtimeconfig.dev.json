@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\UnicornMAS\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\UnicornMAS\\.nuget\\packages"
+    ]
+  }
+}

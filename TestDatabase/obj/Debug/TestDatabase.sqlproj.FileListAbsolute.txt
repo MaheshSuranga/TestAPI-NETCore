@@ -1,0 +1,10 @@
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\TestDatabase\bin\Debug\TestDatabase.dacpac
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\TestDatabase\bin\Debug\TestDatabase.dll
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\TestDatabase\bin\Debug\TestDatabase.pdb
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\TestDatabase\obj\Debug\TestDatabase.dll
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\TestDatabase\obj\Debug\TestDatabase.pdb
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\TestDatabase\obj\Debug\Model.xml
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\TestDatabase\obj\Debug\refactor.xml
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\TestDatabase\obj\Debug\postdeploy.sql
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\TestDatabase\obj\Debug\predeploy.sql
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\TestDatabase\obj\Debug\TestDatabase.sqlprojAssemblyReference.cache

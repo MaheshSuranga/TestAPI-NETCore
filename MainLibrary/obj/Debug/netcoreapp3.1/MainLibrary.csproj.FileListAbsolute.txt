@@ -1,0 +1,8 @@
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\MainLibrary\bin\Debug\netcoreapp3.1\MainLibrary.deps.json
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\MainLibrary\bin\Debug\netcoreapp3.1\MainLibrary.dll
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\MainLibrary\obj\Debug\netcoreapp3.1\MainLibrary.csprojAssemblyReference.cache
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\MainLibrary\obj\Debug\netcoreapp3.1\MainLibrary.AssemblyInfoInputs.cache
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\MainLibrary\obj\Debug\netcoreapp3.1\MainLibrary.AssemblyInfo.cs
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\MainLibrary\bin\Debug\netcoreapp3.1\MainLibrary.pdb
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\MainLibrary\obj\Debug\netcoreapp3.1\MainLibrary.dll
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\MainLibrary\obj\Debug\netcoreapp3.1\MainLibrary.pdb

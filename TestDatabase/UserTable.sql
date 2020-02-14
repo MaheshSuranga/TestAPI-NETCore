@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[UserTable]
+(
+	[code] NVARCHAR(16) NOT NULL PRIMARY KEY, 
+    [pass] NVARCHAR(512) NOT NULL
+)

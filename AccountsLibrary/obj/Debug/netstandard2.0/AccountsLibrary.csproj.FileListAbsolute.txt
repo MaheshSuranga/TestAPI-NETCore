@@ -1,0 +1,8 @@
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\AccountsLibrary\bin\Debug\netstandard2.0\AccountsLibrary.deps.json
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\AccountsLibrary\bin\Debug\netstandard2.0\AccountsLibrary.dll
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\AccountsLibrary\obj\Debug\netstandard2.0\AccountsLibrary.csprojAssemblyReference.cache
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\AccountsLibrary\obj\Debug\netstandard2.0\AccountsLibrary.AssemblyInfoInputs.cache
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\AccountsLibrary\obj\Debug\netstandard2.0\AccountsLibrary.AssemblyInfo.cs
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\AccountsLibrary\bin\Debug\netstandard2.0\AccountsLibrary.pdb
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\AccountsLibrary\obj\Debug\netstandard2.0\AccountsLibrary.dll
+C:\Users\UnicornMAS\source\repos\TestWebAppAPI\AccountsLibrary\obj\Debug\netstandard2.0\AccountsLibrary.pdb

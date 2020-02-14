@@ -1,0 +1,186 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>test authentication</p>
+    <p><button onclick="testauth();">start</button></p>
+    <p><label>email:</label><input id="email" /></p>
+    <p><label>password:</label><input id="pass" /></p>
+    <p>test create worker</p>
+    <p><button onclick="testcreateworker();">start</button></p>
+
+    <p><label>name:</label><input id="name" /></p>
+    <p><label>description:</label><input id="description" /></p>
+    <p><label>location:</label><input id="location" /></p>
+    <p><label>position:</label><input id="position" /></p>
+    <p>test update worker</p>
+    <p><button onclick="testupdateworker();">start</button></p>
+    <p><label>worker code:</label><input id="workercode" /></p>
+    <p><label>name:</label><input id="name1" /></p>
+    <p><label>description:</label><input id="description1" /></p>
+    <p><label>location:</label><input id="location1" /></p>
+    <p><label>position:</label><input id="position1" /></p>
+    <p>test update worker statistics</p>
+    <p><button onclick="testupdateworkerstatistics();">start</button></p>
+    <p><label>worker code:</label><input id="workercode1" /></p>
+    <p> <input id="ok1" type="checkbox" /></p>
+    <p><label>hourly rate:</label><input id="hourlyrate" /></p>
+    <p> <input id="ok2" type="checkbox" /></p>
+    <p><label>hours worked:</label><input id="hoursworked" /></p>
+    <p> <input id="ok3" type="checkbox" /></p>
+    <p><label>overtime rate:</label><input id="overtimerate" /></p>
+    <p> <input id="ok4" type="checkbox" /></p>
+    <p><label>overtime worked:</label><input id="overtimeworked" /></p>
+    <p>test get worker  statistics data</p>
+    <p><button onclick="testgetworkerstatistics();">start</button></p>
+    <p id="workeroutput"> </p>
+    <p>test get worker data</p>
+    <p><button onclick="testgetworker();">start</button></p>
+    <p id="workerstatisticsoutput"> </p>
+    <p>test delete worker data</p>
+    <p><button onclick="testdeleteworker();">start</button></p>
+    <script>
+        var token = "";
+        function testauth() {
+
+            var requestform = new FormData();
+            requestform.set("email", document.getElementById("email").value);
+            requestform.set("pass", document.getElementById("pass").value);
+
+            var req = new XMLHttpRequest();
+            req.open("POST", "http://localhost:54506/api/Auth/BeginAuth?email=" + document.getElementById("email").value
+                + "&pass=" + document.getElementById("pass").value);
+
+            req.send(requestform);
+
+
+            req.onreadystatechange = function () {
+                console.log(JSON.parse(req.response));
+                if (req.readyState == 4) {
+                    console.log(JSON.parse(req.response));
+                    token = JSON.parse(req.response)["token"];
+
+                }
+            }
+        }
+
+        function testcreateworker() {
+            var requestform = new FormData();
+            requestform.set("name", document.getElementById("name").value);
+            requestform.set("description", document.getElementById("description").value);
+            requestform.set("location", document.getElementById("location").value);
+            requestform.set("position", document.getElementById("position").value);
+
+
+            var req = new XMLHttpRequest();
+            req.open("POST", "http://localhost:54506/api/Workers");
+            req.setRequestHeader("auth", token);
+            req.send(requestform);
+
+
+            req.onreadystatechange = function () {
+                if (req.readyState == 3) {
+                    document.getElementById("workercode").value = req.responseText;
+                    document.getElementById("workercode1").value = req.responseText;
+                }
+            }
+        }
+
+        function testupdateworker() {
+            var requestform = new FormData();
+            requestform.set("name", document.getElementById("name1").value);
+            requestform.set("description", document.getElementById("description1").value);
+            requestform.set("location", document.getElementById("location1").value);
+            requestform.set("position", document.getElementById("position1").value);
+
+
+            var req = new XMLHttpRequest();
+            req.open("PUT", "http://localhost:54506/api/Workers?code=" + document.getElementById("workercode").value);
+            req.setRequestHeader("auth", token);
+            req.send(requestform);
+
+
+            req.onreadystatechange = function () {
+                if (req.readyState == 3) {
+                    alert(req.responseText);
+                }
+            }
+        }
+
+        function testupdateworkerstatistics() {
+            alert("");
+            var requestform = new FormData();
+            alert("");
+            requestform.set("hrate", document.getElementById("hourlyrate").value);
+            requestform.set("hworked", document.getElementById("hoursworked").value);
+            requestform.set("orate", document.getElementById("overtimerate").value);
+            requestform.set("oworked", document.getElementById("overtimeworked").value);
+            alert("");
+            var req = new XMLHttpRequest();
+            req.open("PUT", "http://localhost:54506/api/v1/WorkersStatistics?code=" + document.getElementById("workercode").value +
+                (document.getElementById("ok1").checked ? "&H_rate=1" : "") + (document.getElementById("ok2").checked ? "&H_worked=1" : "") +
+                (document.getElementById("ok3").checked ? "&O_rate=1" : "") + (document.getElementById("ok4").checked ? "&O_worked=1" : ""));
+            req.setRequestHeader("auth", token);
+            req.send(requestform);
+
+
+            req.onreadystatechange = function () {
+                if (req.readyState == 3) {
+                    alert(req.responseText);
+                }
+            }
+        }
+
+        function testgetworkerstatistics() {
+
+
+            var req = new XMLHttpRequest();
+            req.open("GET", "http://localhost:54506/api/v1/WorkersStatistics?code=" + document.getElementById("workercode").value);
+            req.setRequestHeader("auth", token);
+            req.send();
+
+
+            req.onreadystatechange = function () {
+                if (req.readyState == 3) {
+                    alert(req.responseText);
+                }
+            }
+        }
+
+        function testgetworker() {
+
+            var req = new XMLHttpRequest();
+            req.open("GET", "http://localhost:54506/api/Workers?code=" + document.getElementById("workercode").value);
+            req.setRequestHeader("auth", token);
+            req.send();
+
+
+            req.onreadystatechange = function () {
+                if (req.readyState == 3) {
+                    alert(req.responseText);
+                }
+            }
+        }
+
+        function testdeleteworker() {
+
+            var req = new XMLHttpRequest();
+            req.open("DELETE", "http://localhost:54506/api/Workers?code=" + document.getElementById("workercode").value);
+            req.setRequestHeader("auth", token);
+            req.send();
+
+
+            req.onreadystatechange = function () {
+                if (req.readyState == 3) {
+                    alert(req.responseText);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

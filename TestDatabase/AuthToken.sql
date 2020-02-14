@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[AuthToken]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
+    [Token] NVARCHAR(16) NOT NULL, 
+    [UserCode] NVARCHAR(16) NOT NULL, 
+    [Date] DATETIME NOT NULL
+)
